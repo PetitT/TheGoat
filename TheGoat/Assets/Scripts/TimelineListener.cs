@@ -9,6 +9,10 @@ public class TimelineListener : MonoBehaviour
     public static TimelineListener instance;
 
     public event Action onPhaseChange;
+    public event Action<bool> onControlShift;
+    public event Action onGoatTalk;
+    public event Action onWolfTalk;
+    public event Action onNarratorTalk;
 
     private void Awake()
     {
@@ -23,5 +27,23 @@ public class TimelineListener : MonoBehaviour
         onPhaseChange?.Invoke();
     }
 
+    public void ControlShift(bool canControl)
+    {
+        onControlShift?.Invoke(canControl);
+    }
 
+    public void GoatTalk()
+    {
+        onGoatTalk?.Invoke();
+    }
+
+    public void WolfTalk()
+    {
+        onWolfTalk?.Invoke();
+    }
+
+    public void NarratorTalk()
+    {
+        onNarratorTalk?.Invoke();
+    }
 }

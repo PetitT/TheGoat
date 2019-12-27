@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 901076b8edb3b8846b21077991fef753
+guid: df332b5ee27f8e04d9b84b6bf965351f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7712162593315616603
-    second: Wolf-Run_0
+      213: 3203032711678939788
+    second: Wolf-Run (1)_0
   - first:
-      213: -1841092187119174680
-    second: Wolf-Run_1
+      213: -6221804691232385090
+    second: Wolf-Run (1)_1
   - first:
-      213: -3085548643341927690
-    second: Wolf-Run_2
+      213: 2113228367479921411
+    second: Wolf-Run (1)_2
   - first:
-      213: -2758694695695122045
-    second: Wolf-Run_3
+      213: 2853108983821461842
+    second: Wolf-Run (1)_3
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -118,13 +118,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Wolf-Run_0
+      name: Wolf-Run (1)_0
       rect:
         serializedVersion: 2
         x: 10
-        y: 370
+        y: 380
         width: 300
-        height: 240
+        height: 210
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,20 +132,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1cb4631e565eec64dafca9c664dd6e40
-      internalID: -7712162593315616603
+      spriteID: d830381f07845f548847e191def6af52
+      internalID: 3203032711678939788
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wolf-Run_1
+      name: Wolf-Run (1)_1
       rect:
         serializedVersion: 2
-        x: 350
-        y: 361
-        width: 280
-        height: 250
+        x: 340
+        y: 360
+        width: 290
+        height: 230
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,20 +153,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 62990985e02279e479a140a4b51c9f07
-      internalID: -1841092187119174680
+      spriteID: 386b6644024be8d469e2e870e2b3c50e
+      internalID: -6221804691232385090
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wolf-Run_2
+      name: Wolf-Run (1)_2
       rect:
         serializedVersion: 2
         x: 30
-        y: 40
+        y: 39
         width: 280
-        height: 250
+        height: 230
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,20 +174,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e4297c0033ef6cf4585a28fdae713f91
-      internalID: -3085548643341927690
+      spriteID: dbfc12b9845107b4fa5da3f809a6b223
+      internalID: 2113228367479921411
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wolf-Run_3
+      name: Wolf-Run (1)_3
       rect:
         serializedVersion: 2
-        x: 350
+        x: 340
         y: 40
-        width: 280
-        height: 250
+        width: 290
+        height: 230
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,8 +195,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4aac9e53360aadb41851fe2a5205978f
-      internalID: -2758694695695122045
+      spriteID: 2849a3dea7fe8fb4188bef15947d1bef
+      internalID: 2853108983821461842
       vertices: []
       indices: 
       edges: []
@@ -204,7 +204,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 85a8c63a07d9f80488fb87d365ed4195
+    spriteID: 5eec44b5b7f7f0c4494a7b5f987ccad7
     internalID: 0
     vertices: []
     indices: 
