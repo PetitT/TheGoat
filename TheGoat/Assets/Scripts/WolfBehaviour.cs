@@ -11,7 +11,7 @@ public class WolfBehaviour : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
-            attacks[0].Attack();
+            attacks[1].Attack();
         }
     }
 }
