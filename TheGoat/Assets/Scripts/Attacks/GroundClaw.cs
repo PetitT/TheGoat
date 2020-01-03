@@ -21,6 +21,8 @@ public class GroundClaw : BaseAttack
         Vector2 pos = GetPos();
         yield return new WaitForSeconds(chargeTime / 2);
         Pool.instance.GetItemFromPool(claw, pos);
+        yield return new WaitForSeconds(chargeTime);
+        AttackFinished();
     }
 
     private Vector2 GetPos()

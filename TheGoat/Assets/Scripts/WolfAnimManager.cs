@@ -34,4 +34,9 @@ public class WolfAnimManager : MonoBehaviour
     {
         anim.SetTrigger("Spin");
     }
+
+    public void Move(bool isMoving)
+    {
+        anim.SetBool("IsMoving", isMoving);
+    }
 }

@@ -361,9 +361,10 @@ GameObject:
   - component: {fileID: 7679633435141521002}
   - component: {fileID: 6486712269188633583}
   - component: {fileID: 260605558398517866}
+  - component: {fileID: 8605375051797136934}
+  - component: {fileID: 4215304561854190477}
   - component: {fileID: 566633632301720679}
   - component: {fileID: 4823505715593018193}
-  - component: {fileID: 4215304561854190477}
   m_Layer: 0
   m_Name: Wolf
   m_TagString: DamageDealer
@@ -405,6 +406,26 @@ MonoBehaviour:
   - {fileID: 7679633435141521002}
   - {fileID: 6486712269188633583}
   - {fileID: 260605558398517866}
+  - {fileID: 8605375051797136934}
+  P1Attacks:
+  - {fileID: 7679633435141521002}
+  P2Attacks:
+  - {fileID: 7679633435141521002}
+  - {fileID: 8605375051797136934}
+  P3Attacks:
+  - {fileID: 7679633435141521002}
+  - {fileID: 6486712269188633583}
+  - {fileID: 8605375051797136934}
+  - {fileID: 260605558398517866}
+  vulnerabilityTimer:
+  - 3
+  - 2
+  - 1
+  timeBetweenAttacks:
+  - 3
+  - 2
+  - 1
+  attacksBeforeVulnerability: 030000000500000007000000
 --- !u!114 &3951666928579545032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -487,6 +508,35 @@ MonoBehaviour:
   claw: {fileID: 2219809862496270159, guid: cb3a80cbd508d5444bb94a0b0bdf664a, type: 3}
   groundPos: {fileID: 0}
   chargeTime: 0.3
+--- !u!114 &8605375051797136934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8369234670818994900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d54b6d9c43a2564eb3365f5e32f7162, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dashLeftPos: {fileID: 0}
+  dashRightPos: {fileID: 0}
+  runSpeed: 10
+  windupTime: 0.2
+--- !u!114 &4215304561854190477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8369234670818994900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acadd3b0333a92a4fb017b730ac93336, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wolfCollider: {fileID: 566633632301720679}
 --- !u!60 &566633632301720679
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -541,19 +591,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &4215304561854190477
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8369234670818994900}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: acadd3b0333a92a4fb017b730ac93336, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  wolfCollider: {fileID: 566633632301720679}
 --- !u!1 &8646692274717727163
 GameObject:
   m_ObjectHideFlags: 0

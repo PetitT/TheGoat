@@ -58,5 +58,6 @@ public class Leap : BaseAttack
         gameObject.transform.position = new Vector2(targetX, groundedHeight.position.y);
         WolfAnimManager.instance.Land();
         WolfColliderManager.instance.ToggleCollider(false);
+        AttackFinished();
     }
 }

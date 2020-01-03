@@ -23,6 +23,8 @@ public class ToothLaunch : BaseAttack
         yield return new WaitForSeconds(windupTime);
         GameObject newTooth = Pool.instance.GetItemFromPool(tooth, GetRandomPosition());
         newTooth.GetComponent<LaunchedToothBehaviour>().Initialize(lifeTime, moveSpeed, rotationSpeed, LookAtGoat.instance.lookingLeft? Vector2.left : Vector2.right);
+        yield return new WaitForSeconds(windupTime);
+        AttackFinished();
     }
 
     private Vector2 GetRandomPosition()

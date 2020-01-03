@@ -1,5 +1,21 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8629674886317047035
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
+  m_Name: Signal Emitter
+  m_EditorClassIdentifier: 
+  m_Time: 6.083333333333333
+  m_Retroactive: 0
+  m_EmitOnce: 0
+  m_Asset: {fileID: 11400000, guid: afb206f48dc43c34cb30763761d5757c, type: 2}
 --- !u!114 &-8420985451201518896
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -396,6 +412,22 @@ MonoBehaviour:
   VirtualCamera:
     exposedName: e10e540d9cbad4e48a3ff076814f1ae3
     defaultValue: {fileID: 0}
+--- !u!114 &-4390848454297980693
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
+  m_Name: Signal Emitter
+  m_EditorClassIdentifier: 
+  m_Time: 44.88333333333333
+  m_Retroactive: 0
+  m_EmitOnce: 0
+  m_Asset: {fileID: 11400000, guid: 1416a9726d6243f41bb07adddc47a8ad, type: 2}
 --- !u!114 &-3520258664355205813
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -418,7 +450,8 @@ MonoBehaviour:
   m_Children: []
   m_Clips: []
   m_Markers:
-    m_Objects: []
+    m_Objects:
+    - {fileID: -8629674886317047035}
   m_InfiniteClipPreExtrapolation: 1
   m_InfiniteClipPostExtrapolation: 1
   m_InfiniteClipOffsetPosition: {x: -12.98, y: -2.84, z: 0}
@@ -462,6 +495,22 @@ MonoBehaviour:
     - {fileID: -1235457671082020700}
     - {fileID: -6900697804111031741}
     - {fileID: 9060878988734798240}
+--- !u!114 &-2601430900684769958
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
+  m_Name: Signal Emitter
+  m_EditorClassIdentifier: 
+  m_Time: 12.750000000000997
+  m_Retroactive: 0
+  m_EmitOnce: 0
+  m_Asset: {fileID: 11400000, guid: aa910b4891b6e684ea75c2001a8ddc50, type: 2}
 --- !u!114 &-1235457671082020700
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -648,6 +697,22 @@ MonoBehaviour:
   VirtualCamera:
     exposedName: a73b454c4621ad749a550743e5b8fcb5
     defaultValue: {fileID: 0}
+--- !u!114 &1960806313264211954
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
+  m_Name: Signal Emitter
+  m_EditorClassIdentifier: 
+  m_Time: 30.15
+  m_Retroactive: 0
+  m_EmitOnce: 0
+  m_Asset: {fileID: 11400000, guid: 1416a9726d6243f41bb07adddc47a8ad, type: 2}
 --- !u!114 &2375296340857330545
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -739,6 +804,9 @@ MonoBehaviour:
     m_Objects:
     - {fileID: 6470339228481375085}
     - {fileID: -367173482348291492}
+    - {fileID: -2601430900684769958}
+    - {fileID: 1960806313264211954}
+    - {fileID: -4390848454297980693}
 --- !u!114 &6087117124564353798
 MonoBehaviour:
   m_ObjectHideFlags: 1

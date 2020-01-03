@@ -162,6 +162,8 @@ Transform:
   - {fileID: 1674250883}
   - {fileID: 1661408218}
   - {fileID: 1862182918}
+  - {fileID: 1024190937}
+  - {fileID: 609166946}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -722,6 +724,36 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 600088111}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &609166945
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 609166946}
+  m_Layer: 0
+  m_Name: WolfDashRight
+  m_TagString: Untagged
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &609166946
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 609166945}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 13.14, y: -2.75, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 253715362}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &845346491
 GameObject:
   m_ObjectHideFlags: 3
@@ -797,6 +829,36 @@ Transform:
   - {fileID: 497297646}
   m_Father: {fileID: 1854129302}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1024190936
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1024190937}
+  m_Layer: 0
+  m_Name: WolfDashLeft
+  m_TagString: Untagged
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1024190937
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1024190936}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.92, y: -2.75, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 253715362}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1172793168 stripped
 GameObject:
@@ -1526,6 +1588,9 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 70409b73ac6194c4bbf0da8731c40565, type: 2}
     - {fileID: 11400000, guid: 4d63c49b34cc87a438d6f5a9bc124dfe, type: 2}
     - {fileID: 11400000, guid: 29b6a9ecd954f5540ac3cdb341fe4511, type: 2}
+    - {fileID: 11400000, guid: aa910b4891b6e684ea75c2001a8ddc50, type: 2}
+    - {fileID: 11400000, guid: 8d7bd2db4f393514fb566f6f637564be, type: 2}
+    - {fileID: 11400000, guid: 2b9bdb91accc6c14ead155b5adf89ae1, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -1606,6 +1671,51 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1920642026}
           m_MethodName: NarratorTalk
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1920642026}
+          m_MethodName: WolfStateAttack
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1920642026}
+          m_MethodName: WolfStateIdle
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1920642026}
+          m_MethodName: WolfStateVulnerable
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -1982,11 +2092,26 @@ PrefabInstance:
       propertyPath: groundedHeight
       value: 
       objectReference: {fileID: 1661408218}
+    - target: {fileID: 6486712269188633583, guid: 65cda687276f56f4d89afd347b857672,
+        type: 3}
+      propertyPath: fallSpeed
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 260605558398517866, guid: 65cda687276f56f4d89afd347b857672,
         type: 3}
       propertyPath: groundPos
       value: 
       objectReference: {fileID: 1862182918}
+    - target: {fileID: 8605375051797136934, guid: 65cda687276f56f4d89afd347b857672,
+        type: 3}
+      propertyPath: dashLeftPos
+      value: 
+      objectReference: {fileID: 1024190937}
+    - target: {fileID: 8605375051797136934, guid: 65cda687276f56f4d89afd347b857672,
+        type: 3}
+      propertyPath: dashRightPos
+      value: 
+      objectReference: {fileID: 609166946}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65cda687276f56f4d89afd347b857672, type: 3}
 --- !u!114 &655948186787184845 stripped

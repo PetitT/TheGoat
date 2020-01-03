@@ -13,6 +13,7 @@ public class TimelineListener : MonoBehaviour
     public event Action onGoatTalk;
     public event Action onWolfTalk;
     public event Action onNarratorTalk;
+    public event Action<WolfState> onWolfStateChange;
 
     private void Awake()
     {
@@ -46,4 +47,20 @@ public class TimelineListener : MonoBehaviour
     {
         onNarratorTalk?.Invoke();
     }
+
+    public void WolfStateIdle()
+    {
+        onWolfStateChange?.Invoke(WolfState.idle);
+    }
+
+    public void WolfStateAttack()
+    {
+        onWolfStateChange?.Invoke(WolfState.attacking);
+    }
+
+    public void WolfStateVulnerable()
+    {
+        onWolfStateChange?.Invoke(WolfState.vulnerable);
+    }
+
 }
