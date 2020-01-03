@@ -9,7 +9,7 @@ public class ToothLaunch : BaseAttack
     public GameObject tooth;
     public float moveSpeed;
     public float rotationSpeed;
-    public float damage;
+    public float lifeTime;
     public float windupTime;
 
     public override void Attack()
@@ -22,7 +22,7 @@ public class ToothLaunch : BaseAttack
     {
         yield return new WaitForSeconds(windupTime);
         GameObject newTooth = Pool.instance.GetItemFromPool(tooth, GetRandomPosition());
-        newTooth.GetComponent<LaunchedToothBehaviour>().Initialize(damage, moveSpeed, rotationSpeed, LookAtGoat.instance.lookingLeft? Vector2.left : Vector2.right);
+        newTooth.GetComponent<LaunchedToothBehaviour>().Initialize(lifeTime, moveSpeed, rotationSpeed, LookAtGoat.instance.lookingLeft? Vector2.left : Vector2.right);
     }
 
     private Vector2 GetRandomPosition()

@@ -9,9 +9,19 @@ public class WolfBehaviour : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.Keypad0))
+        {
+            attacks[0].Attack();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Keypad1))
         {
             attacks[1].Attack();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Keypad2))
+        {
+            attacks[2].Attack();
         }
     }
 }

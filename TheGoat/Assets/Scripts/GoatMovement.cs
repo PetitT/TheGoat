@@ -25,6 +25,9 @@ public class GoatMovement : MonoBehaviour
     public float buffedMoveSpeed;
     public float attackTime;
 
+    [Header("Particles")]
+    public ParticleSystem grassParticles;
+
     private float currentMoveSpeed;
     private float YMove;
     private bool isJumping = true;
@@ -80,6 +83,7 @@ public class GoatMovement : MonoBehaviour
                 YMove = jumpForce;
                 isJumping = true;
                 anim.SetTrigger("Jump");
+                grassParticles.Play();
             }
         }
     }
@@ -101,6 +105,7 @@ public class GoatMovement : MonoBehaviour
             {
                 isJumping = false;
                 anim.SetTrigger("Land");
+                grassParticles.Play();
             }
         }
     }

@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 1901034920}
   - component: {fileID: 1901034921}
   m_Layer: 0
-  m_Name: Wolf
+  m_Name: WolfCam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -115,7 +115,7 @@ Transform:
   m_Children:
   - {fileID: 757306477}
   m_Father: {fileID: 5538438975965096172}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1901034921
 MonoBehaviour:
@@ -177,12 +177,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 189414606134338076}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.21, y: -1.6, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.2100005, y: -1.5999998, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 5538438975965096172}
-  m_RootOrder: 3
+  m_Father: {fileID: 7879877173715484853}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &655948188596594792
 GameObject:
@@ -284,6 +284,38 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &902797031333071279
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7879877173715484853}
+  m_Layer: 0
+  m_Name: Transforms
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7879877173715484853
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 902797031333071279}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1303871812036625734}
+  - {fileID: 3943989424269754115}
+  m_Father: {fileID: 5538438975965096172}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3354233923582445869
 GameObject:
   m_ObjectHideFlags: 0
@@ -307,12 +339,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3354233923582445869}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.21, y: 1.87, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.2100005, y: 1.8700002, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 5538438975965096172}
-  m_RootOrder: 2
+  m_Father: {fileID: 7879877173715484853}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8369234670818994900
 GameObject:
@@ -328,6 +360,7 @@ GameObject:
   - component: {fileID: 294372093}
   - component: {fileID: 7679633435141521002}
   - component: {fileID: 6486712269188633583}
+  - component: {fileID: 260605558398517866}
   - component: {fileID: 566633632301720679}
   - component: {fileID: 4823505715593018193}
   - component: {fileID: 4215304561854190477}
@@ -351,9 +384,8 @@ Transform:
   m_Children:
   - {fileID: 655948188596594795}
   - {fileID: 5771455079258672790}
-  - {fileID: 1303871812036625734}
-  - {fileID: 3943989424269754115}
   - {fileID: 1901034920}
+  - {fileID: 7879877173715484853}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -372,6 +404,7 @@ MonoBehaviour:
   attacks:
   - {fileID: 7679633435141521002}
   - {fileID: 6486712269188633583}
+  - {fileID: 260605558398517866}
 --- !u!114 &3951666928579545032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -418,7 +451,7 @@ MonoBehaviour:
   tooth: {fileID: 9057075384592579939, guid: 32fca0b25e798e8468dff608638ea4a2, type: 3}
   moveSpeed: 8
   rotationSpeed: 720
-  damage: 1
+  lifeTime: 5
   windupTime: 0.3
 --- !u!114 &6486712269188633583
 MonoBehaviour:
@@ -439,6 +472,21 @@ MonoBehaviour:
   fallSpeed: 0.3
   waitTime: 0.3
   body: {fileID: 655948188596594792}
+--- !u!114 &260605558398517866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8369234670818994900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd6f3ebafb4c1eb4489512e8f2ba820b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  claw: {fileID: 2219809862496270159, guid: cb3a80cbd508d5444bb94a0b0bdf664a, type: 3}
+  groundPos: {fileID: 0}
+  chargeTime: 0.3
 --- !u!60 &566633632301720679
 PolygonCollider2D:
   m_ObjectHideFlags: 0
