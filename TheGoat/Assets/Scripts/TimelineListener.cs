@@ -14,6 +14,8 @@ public class TimelineListener : MonoBehaviour
     public event Action onWolfTalk;
     public event Action onNarratorTalk;
     public event Action<WolfState> onWolfStateChange;
+    public event Action onWolfLastWords;
+    public event Action onGameReset;
 
     private void Awake()
     {
@@ -62,5 +64,16 @@ public class TimelineListener : MonoBehaviour
     {
         onWolfStateChange?.Invoke(WolfState.vulnerable);
     }
+
+    public void WolfLastWords()
+    {
+        onWolfLastWords?.Invoke();
+    }
+
+    public void ResetGame()
+    {
+        onGameReset?.Invoke();
+    }
+    
 
 }

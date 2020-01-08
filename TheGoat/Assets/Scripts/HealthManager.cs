@@ -28,6 +28,7 @@ public class HealthManager : MonoBehaviour
     public void TakeDamage()
     {
         health--;
+        ParticlesManager.instance.PlaySmallBlood();
 
         if (health <= 0)
         {

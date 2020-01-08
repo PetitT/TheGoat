@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - DamageDealer
+  - Goat
   layers:
   - Default
   - TransparentFX

@@ -7,10 +7,7 @@ public abstract class BaseAttack : MonoBehaviour
 {
     public event Action onAttackFinished;
 
-    public virtual void Attack()
-    {
-        
-    }
+    public abstract void Attack();
 
     protected void AttackFinished()
     {

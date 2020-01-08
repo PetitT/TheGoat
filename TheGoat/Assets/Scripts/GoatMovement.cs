@@ -15,28 +15,27 @@ public class GoatMovement : MonoBehaviour
     public LayerMask ground;
     public float distanceFromGround;
 
+    [Header("Attack")]
+    public float buffedMoveSpeed;
+
     [Header("Animation")]
     public Animator anim;
     public GameObject body;
 
-    [Header("Attack")]
-    public List<GameObject> attackObjects;
-    public float attackCooldown;
-    public float buffedMoveSpeed;
-    public float attackTime;
-
-    [Header("Particles")]
-    public ParticleSystem grassParticles;
-
     private float currentMoveSpeed;
     private float YMove;
     private bool isJumping = true;
-    private bool canAttack = true;
-    private float remainingAttackCooldown;
 
     private void Start()
     {
+        GoatAttack.instance.onAttack += AttackHandler;
+
         currentMoveSpeed = baseMoveSpeed;
+    }
+
+    private void AttackHandler(bool isAttacking)
+    {
+        currentMoveSpeed = isAttacking ? buffedMoveSpeed : baseMoveSpeed;
     }
 
     void Update()
@@ -45,8 +44,6 @@ public class GoatMovement : MonoBehaviour
         Jump();
         ApplyGravity();
         CheckGround();
-        CheckAttack();
-        AttackCountDown();
     }
 
 
@@ -83,7 +80,7 @@ public class GoatMovement : MonoBehaviour
                 YMove = jumpForce;
                 isJumping = true;
                 anim.SetTrigger("Jump");
-                grassParticles.Play();
+                ParticlesManager.instance.PlayGrass();
             }
         }
     }
@@ -105,47 +102,7 @@ public class GoatMovement : MonoBehaviour
             {
                 isJumping = false;
                 anim.SetTrigger("Land");
-                grassParticles.Play();
-            }
-        }
-    }
-
-    private void CheckAttack()
-    {
-        if (canAttack)
-        {
-            if (Input.GetKeyDown(KeyCode.A))
-            {
-                StartCoroutine("Attack");
-            }
-        }
-    }
-
-    private IEnumerator Attack()
-    {
-        foreach (var item in attackObjects)
-        {
-            item.SetActive(true);
-        }
-        currentMoveSpeed = buffedMoveSpeed;
-        remainingAttackCooldown = attackCooldown;
-        canAttack = false;
-        yield return new WaitForSeconds(attackTime);
-        currentMoveSpeed = baseMoveSpeed;
-        foreach (var item in attackObjects)
-        {
-            item.SetActive(false);
-        }
-    }
-
-    private void AttackCountDown()
-    {
-        if (!canAttack)
-        {
-            remainingAttackCooldown -= Time.deltaTime;
-            if (remainingAttackCooldown <= 0)
-            {
-                canAttack = true;
+                ParticlesManager.instance.PlayGrass();
             }
         }
     }

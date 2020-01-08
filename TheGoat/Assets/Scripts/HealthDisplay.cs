@@ -19,7 +19,15 @@ public class HealthDisplay : MonoBehaviour
 
     private void DamageTakenHandler()
     {
-        hearts[CurrentHeart].SetActive(false);
+        try
+        {
+            hearts[CurrentHeart].SetActive(false);
+        }
+        catch
+        {
+            Debug.Log("Already Dead");
+        }
+
         CurrentHeart--;
         if (CurrentHeart >= 0)
         {

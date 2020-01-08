@@ -28,6 +28,7 @@ public class Leap : BaseAttack
             gameObject.transform.position = new Vector2(transform.position.x, YPos);
             yield return null;
         }
+        WolfAnimManager.instance.StopSpin();
         gameObject.transform.position = new Vector2(transform.position.x, jumpHeight.position.y);
         StartCoroutine(Wait());
     }

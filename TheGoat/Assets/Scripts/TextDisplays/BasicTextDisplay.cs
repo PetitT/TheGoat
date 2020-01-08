@@ -16,6 +16,18 @@ public abstract class BasicTextDisplay : MonoBehaviour
         StartCoroutine("DisplayText");
     }
 
+    public void DisplaySpecificText(string text)
+    {
+        StartCoroutine(SpecificText(text));
+    }
+
+    private IEnumerator SpecificText(string text)
+    {
+        tmp.text = text;
+        yield return new WaitForSeconds(timeToDisplayText);
+        tmp.text = "";
+    }
+
     private IEnumerator DisplayText()
     {
         tmp.text = data.texts[currentText];
