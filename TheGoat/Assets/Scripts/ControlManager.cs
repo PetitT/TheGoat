@@ -6,6 +6,9 @@ using UnityEngine;
 public class ControlManager : MonoBehaviour
 {
     public GoatMovement control;
+    public GameObject goat;
+    public Transform goatMinY;
+    public float fallSpeed;
 
     private void Start()
     {
@@ -16,5 +19,16 @@ public class ControlManager : MonoBehaviour
     {
         control.enabled = canControl;
         Debug.Log(canControl ? "Control Active" : "Control Inactive");
+        if (!control.enabled)
+            StartCoroutine(Fall());
+    }
+
+    private IEnumerator Fall()
+    {
+        while(goat.transform.position.y > goatMinY.position.y)
+        {
+            goat.transform.Translate(Vector2.down * fallSpeed * Time.deltaTime);
+            yield return null;
+        }
     }
 }

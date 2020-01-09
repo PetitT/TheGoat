@@ -66,7 +66,6 @@ public class WolfBehaviour : MonoBehaviour
         InputTest(); //to remove
 
         CheckCurrentState();
-        Debug.Log(currentState.ToString());
     }
 
     private void CheckCurrentState()

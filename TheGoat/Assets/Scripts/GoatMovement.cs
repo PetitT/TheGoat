@@ -7,6 +7,7 @@ public class GoatMovement : MonoBehaviour
 {
     [Header("Movement")]
     public float baseMoveSpeed;
+    public Transform maxX, minX;
 
     [Header("Jump")]
     public float jumpForce;
@@ -44,6 +45,7 @@ public class GoatMovement : MonoBehaviour
         Jump();
         ApplyGravity();
         CheckGround();
+        ClampPos();
     }
 
 
@@ -105,5 +107,17 @@ public class GoatMovement : MonoBehaviour
                 ParticlesManager.instance.PlayGrass();
             }
         }
+    }
+
+    private void ClampPos()
+    {
+        float X = transform.position.x;
+
+        if (X > maxX.position.x)
+           X = maxX.position.x;
+        if (X < minX.position.x)
+           X = minX.position.x;
+
+        transform.position = new Vector2(X, transform.position.y);
     }
 }

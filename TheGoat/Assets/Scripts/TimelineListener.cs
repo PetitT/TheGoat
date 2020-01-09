@@ -16,6 +16,7 @@ public class TimelineListener : MonoBehaviour
     public event Action<WolfState> onWolfStateChange;
     public event Action onWolfLastWords;
     public event Action onGameReset;
+    public event Action<SoundManager.Song> onSongChange;
 
     private void Awake()
     {
@@ -73,6 +74,21 @@ public class TimelineListener : MonoBehaviour
     public void ResetGame()
     {
         onGameReset?.Invoke();
+    }
+
+    public void PlayJoJo()
+    {
+        onSongChange(SoundManager.Song.jojo);
+    }
+
+    public void PlayChill()
+    {
+        onSongChange(SoundManager.Song.chill);
+    }
+
+    public void PlayBloodborne()
+    {
+        onSongChange(SoundManager.Song.bloodborne);
     }
     
 
