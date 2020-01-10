@@ -1,0 +1,156 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4608736939317103027
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4608736939317103028}
+  - component: {fileID: 4608736939317103031}
+  - component: {fileID: 4608736939317103029}
+  - component: {fileID: 4608736939317103030}
+  - component: {fileID: 4608736939317103016}
+  - component: {fileID: 4608736939317103017}
+  - component: {fileID: 4608736939317103018}
+  - component: {fileID: 4608736939317103019}
+  - component: {fileID: 4608736939317103020}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4608736939317103028
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4608736939317103027}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4608736939317103031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4608736939317103027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52ac2cd9bcdf659448793e6ebc97d5b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameTime: 290
+  remainingGameTime: 0
+--- !u!114 &4608736939317103029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4608736939317103027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ecda2a6e8c9a104db202d38e170dcb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  control: {fileID: 0}
+  goat: {fileID: 0}
+  goatMinY: {fileID: 0}
+  fallSpeed: 3
+--- !u!114 &4608736939317103030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4608736939317103027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97ad0b13298d74b479f6901e2a1ca56d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectsToPool:
+  - {fileID: 9057075384592579939, guid: 32fca0b25e798e8468dff608638ea4a2, type: 3}
+  - {fileID: 2219809862496270159, guid: cb3a80cbd508d5444bb94a0b0bdf664a, type: 3}
+  - {fileID: 8111324117787303159, guid: ef3afa2eae2c87e45a9d53d7faed70dc, type: 3}
+  numberToCreateAtStart: 5
+--- !u!114 &4608736939317103016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4608736939317103027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4226401de2e64cc4f97c619943945bbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 3
+--- !u!114 &4608736939317103017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4608736939317103027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66d9f9604c3923947baa5ccc2a7bc7ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameTimeline: {fileID: 0}
+  gameOverTimeline: {fileID: 0}
+--- !u!114 &4608736939317103018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4608736939317103027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9bb4b168a6d0894497f46e8de02a9b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slowdownTime: 3
+  slowdownForce: 0.3
+--- !u!114 &4608736939317103019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4608736939317103027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e97a12f17416d3548b66b444289e7059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4608736939317103020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4608736939317103027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 905c2d189e4103c499dbd88ef8d116bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wolfBlood: {fileID: 0}
+  wolf: {fileID: 0}
+  slowForce: 0.2
+  slowDuration: 5

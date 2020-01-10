@@ -102,7 +102,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 655948188596594792}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -9962,11 +9962,11 @@ MonoBehaviour:
   - {fileID: 1303871812036625734}
   - {fileID: 3943989424269754115}
   tooth: {fileID: 9057075384592579939, guid: 32fca0b25e798e8468dff608638ea4a2, type: 3}
-  moveSpeed: 10
+  moveSpeed: 13
   rotationSpeed: 720
   lifeTime: 5
   windupTime: 0.45
-  numberOfTeeth: {x: 2, y: 6}
+  numberOfTeeth: {x: 3, y: 6}
 --- !u!114 &51834254158598964
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10038,7 +10038,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dashLeftPos: {fileID: 0}
   dashRightPos: {fileID: 0}
-  runSpeed: 12
+  runSpeed: 15
   windupTime: 0.2
 --- !u!114 &3535249408037639173
 MonoBehaviour:

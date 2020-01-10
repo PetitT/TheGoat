@@ -12,6 +12,6 @@ public class GameReset : MonoBehaviour
 
     private void GameResetHandler()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(0);
     }
 }

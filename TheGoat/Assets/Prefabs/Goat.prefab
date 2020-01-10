@@ -10383,7 +10383,7 @@ MonoBehaviour:
   attackObjects:
   - {fileID: 5690054455050672104}
   - {fileID: 5690054454970201167}
-  attackCooldown: 3
+  attackCooldown: 10
   attackTime: 1
 --- !u!1 &5690054455169449200
 GameObject:
