@@ -5,6 +5,7 @@ using UnityEngine;
 public class WolfAnimManager : MonoBehaviour
 {
     public Animator anim;
+    public ParticleSystem particle;
     public static WolfAnimManager instance;
 
     private void Awake()
@@ -43,5 +44,13 @@ public class WolfAnimManager : MonoBehaviour
     public void Move(bool isMoving)
     {
         anim.SetBool("IsMoving", isMoving);
+    }
+
+    public void ToggleParticle(bool isPlaying)
+    {
+        if (isPlaying)
+            particle.Play();
+        else
+            particle.Stop();
     }
 }

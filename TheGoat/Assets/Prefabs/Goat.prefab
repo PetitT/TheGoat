@@ -10200,6 +10200,7 @@ MonoBehaviour:
   baseMoveSpeed: 8
   maxX: {fileID: 0}
   minX: {fileID: 0}
+  minY: {fileID: 0}
   jumpForce: 16
   gravity: 30
   groundCheck: {fileID: 5690054455554842591}

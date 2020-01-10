@@ -16,7 +16,7 @@ TagManager:
   - 
   - 
   - Ground
-  - 
+  - Camera
   - 
   - 
   - 
@@ -40,6 +40,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Text
+    uniqueID: 3818847399
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

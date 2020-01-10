@@ -63,7 +63,7 @@ public class WolfBehaviour : MonoBehaviour
 
     private void Update()
     {
-        InputTest(); //to remove
+     //   InputTest(); //to remove
 
         CheckCurrentState();
     }

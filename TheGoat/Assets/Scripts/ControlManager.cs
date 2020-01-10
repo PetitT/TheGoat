@@ -18,7 +18,6 @@ public class ControlManager : MonoBehaviour
     private void ControlShiftHandler(bool canControl)
     {
         control.enabled = canControl;
-        Debug.Log(canControl ? "Control Active" : "Control Inactive");
         if (!control.enabled)
             StartCoroutine(Fall());
     }

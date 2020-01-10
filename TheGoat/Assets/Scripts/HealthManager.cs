@@ -16,8 +16,11 @@ public class HealthManager : MonoBehaviour
             Destroy(this);
         else
             instance = this;
+    }
 
-        GoatCollisionManager.instance.onDamageTaken += DamageTakenHandler;
+    private void Start()
+    {
+        GoatCollisionManager.instance.onDamageTaken += DamageTakenHandler;        
     }
 
     private void DamageTakenHandler()
@@ -29,6 +32,7 @@ public class HealthManager : MonoBehaviour
     {
         health--;
         ParticlesManager.instance.PlaySmallBlood();
+        SoundManager.instance.PlaySound(SoundManager.Sound.splat);
 
         if (health <= 0)
         {

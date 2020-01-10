@@ -13,4 +13,7 @@ MonoBehaviour:
   m_Name: Narrator
   m_EditorClassIdentifier: 
   texts:
-  - On a dark night of full moon
+  - It was a night of full moon
+  - The goat had to survive until sunrise
+  - It could use it's shield to prevent damage
+  - Truly, a remarkable opponent...

@@ -51,6 +51,7 @@ public class GoatCollisionManager : MonoBehaviour
             else if(isShielded)
             {
                 ParticlesManager.instance.PlayBlock();
+                SoundManager.instance.PlaySound(SoundManager.Sound.block);
             }
         }
     }

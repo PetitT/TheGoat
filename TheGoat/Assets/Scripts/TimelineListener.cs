@@ -100,4 +100,14 @@ public class TimelineListener : MonoBehaviour
     {
         SoundManager.instance.PlaySound(SoundManager.Sound.meeeh);
     }
+
+    public void WolfDeath()
+    {
+        WinGame.instance.Win();
+    }
+
+    public void BladeSounds()
+    {
+        SoundManager.instance.SwordAttack();
+    }
 }

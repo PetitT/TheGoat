@@ -23,6 +23,7 @@ public class Leap : BaseAttack
         SoundManager.instance.PlaySound(SoundManager.Sound.wolfHowl);
         WolfAnimManager.instance.Jump();
         WolfAnimManager.instance.Spin();
+        WolfAnimManager.instance.ToggleParticle(true);
         while (transform.position.y < jumpHeight.position.y - securityDistance)
         {
             float YPos = Mathf.Lerp(transform.position.y, jumpHeight.position.y, jumpSpeed);
@@ -60,6 +61,7 @@ public class Leap : BaseAttack
         gameObject.transform.position = new Vector2(targetX, groundedHeight.position.y);
         WolfAnimManager.instance.Land();
         WolfColliderManager.instance.ToggleCollider(false);
+        WolfAnimManager.instance.ToggleParticle(false);
         AttackFinished();
     }
 }

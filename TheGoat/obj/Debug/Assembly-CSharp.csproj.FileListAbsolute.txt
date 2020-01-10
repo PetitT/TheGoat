@@ -271,3 +271,7 @@ C:\Users\Lowthyst\Desktop\MesJeux\TheGoat\TheGoat\obj\Debug\Assembly-CSharp.cspr
 C:\Users\Lowthyst\Desktop\MesJeux\TheGoat\TheGoat\obj\Debug\Assembly-CSharp.csproj.CopyComplete
 C:\Users\Lowthyst\Desktop\MesJeux\TheGoat\TheGoat\obj\Debug\Assembly-CSharp.dll
 C:\Users\Lowthyst\Desktop\MesJeux\TheGoat\TheGoat\obj\Debug\Assembly-CSharp.pdb
+C:\Users\Lowthyst\Desktop\MesJeux\TheGoat\TheGoat\Temp\bin\Debug\Unity.Postprocessing.Editor.dll
+C:\Users\Lowthyst\Desktop\MesJeux\TheGoat\TheGoat\Temp\bin\Debug\Unity.Postprocessing.Runtime.dll
+C:\Users\Lowthyst\Desktop\MesJeux\TheGoat\TheGoat\Temp\bin\Debug\Unity.Postprocessing.Editor.pdb
+C:\Users\Lowthyst\Desktop\MesJeux\TheGoat\TheGoat\Temp\bin\Debug\Unity.Postprocessing.Runtime.pdb
