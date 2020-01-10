@@ -90,6 +90,14 @@ public class TimelineListener : MonoBehaviour
     {
         onSongChange(SoundManager.Song.bloodborne);
     }
-    
 
+    public void SoundGrowl()
+    {
+        SoundManager.instance.PlaySound(SoundManager.Sound.wolfGrowl);
+    }
+    
+    public void SoundMeeh()
+    {
+        SoundManager.instance.PlaySound(SoundManager.Sound.meeeh);
+    }
 }

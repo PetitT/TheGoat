@@ -9,6 +9,7 @@ public class GoatCollisionManager : MonoBehaviour
 
     private bool isShielded = false;
     private bool isDamageable = true;
+    private bool isInvulnerable = true;
     public float invulnerabilityTimer;
 
     private void Awake()
@@ -22,6 +23,12 @@ public class GoatCollisionManager : MonoBehaviour
     private void Start()
     {
         GoatAttack.instance.onAttack += OnAttackHandler;
+        TimelineListener.instance.onControlShift += ControlShiftHandler;
+    }
+
+    private void ControlShiftHandler(bool obj)
+    {
+        isInvulnerable = !obj;
     }
 
     private void OnAttackHandler(bool isAttacking)
@@ -35,10 +42,11 @@ public class GoatCollisionManager : MonoBehaviour
     {
         if (collision.CompareTag("DamageDealer"))
         {
-            if (!isShielded && isDamageable)
+            if (!isShielded && isDamageable && !isInvulnerable)
             {
                 onDamageTaken?.Invoke();
                 StartCoroutine(InvulnerabilityTime());
+                SoundManager.instance.PlaySound(SoundManager.Sound.goatDamage);
             }
             else if(isShielded)
             {

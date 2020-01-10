@@ -34,6 +34,7 @@ public class SpinFlurry : BaseAttack
     private IEnumerator GetInPosition()
     {
         WolfAnimManager.instance.Jump();
+        SoundManager.instance.PlaySound(SoundManager.Sound.wolfHowl);
         while (!CheckDistance(wolfSpinPos))
         {
             transform.position = Vector2.Lerp(transform.position, wolfSpinPos.position, jumpSpeed);

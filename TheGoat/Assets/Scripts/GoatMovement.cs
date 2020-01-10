@@ -7,7 +7,7 @@ public class GoatMovement : MonoBehaviour
 {
     [Header("Movement")]
     public float baseMoveSpeed;
-    public Transform maxX, minX;
+    public Transform maxX, minX, minY;
 
     [Header("Jump")]
     public float jumpForce;
@@ -104,6 +104,7 @@ public class GoatMovement : MonoBehaviour
             {
                 isJumping = false;
                 anim.SetTrigger("Land");
+                SoundManager.instance.PlaySound(SoundManager.Sound.leaf);
                 ParticlesManager.instance.PlayGrass();
             }
         }
@@ -112,12 +113,16 @@ public class GoatMovement : MonoBehaviour
     private void ClampPos()
     {
         float X = transform.position.x;
+        float Y = transform.position.y;
 
         if (X > maxX.position.x)
            X = maxX.position.x;
         if (X < minX.position.x)
            X = minX.position.x;
 
-        transform.position = new Vector2(X, transform.position.y);
+        if (Y < minY.position.y)
+            Y = minY.position.y;
+
+        transform.position = new Vector2(X, Y);
     }
 }

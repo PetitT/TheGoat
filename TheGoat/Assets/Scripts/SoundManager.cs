@@ -1,14 +1,27 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    public AudioSource jojo, chill, bloodborne;
+    public static SoundManager instance;
+
+    public AudioSource jojo, chill, bloodborne, soundSource;
+    public AudioClip meeeh, goatDamage, leaf, wolfHowl, wolfGrowl;
 
     public enum Song { jojo, chill, bloodborne};
+    public enum Sound { meeeh, goatDamage, leaf, wolfHowl, wolfGrowl};    
 
     private Song currentSong;
+
+    private void Awake()
+    {
+        if (instance)
+            Destroy(this);
+        else
+            instance = this;
+    }
 
     private void Start()
     {
@@ -33,6 +46,30 @@ public class SoundManager : MonoBehaviour
                 break;
             case Song.bloodborne:
                 bloodborne.Play();
+                break;
+            default:
+                break;
+        }
+    }
+
+    public void PlaySound(Sound sound)
+    {
+        switch (sound)
+        {
+            case Sound.meeeh:
+                soundSource.PlayOneShot(meeeh);
+                break;
+            case Sound.goatDamage:
+                soundSource.PlayOneShot(goatDamage);
+                break;
+            case Sound.leaf:
+                soundSource.PlayDelayed(-0.7f);
+                break;
+            case Sound.wolfHowl:
+                soundSource.PlayOneShot(wolfHowl);
+                break;
+            case Sound.wolfGrowl:
+                soundSource.PlayOneShot(wolfGrowl);
                 break;
             default:
                 break;

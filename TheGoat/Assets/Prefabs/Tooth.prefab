@@ -89,8 +89,8 @@ GameObject:
   m_Component:
   - component: {fileID: 9057075384592579937}
   - component: {fileID: 9057075384592579936}
-  - component: {fileID: 5892595504628484034}
   - component: {fileID: -3013392053869215450}
+  - component: {fileID: 1551499126181214970}
   m_Layer: 0
   m_Name: Tooth
   m_TagString: DamageDealer
@@ -126,22 +126,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 9057075384316550194}
---- !u!70 &5892595504628484034
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9057075384592579939}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.1921683, y: -0.20284422}
-  m_Size: {x: 0.88433635, y: 1.9181368}
-  m_Direction: 0
 --- !u!50 &-3013392053869215450
 Rigidbody2D:
   serializedVersion: 4
@@ -163,3 +147,33 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!60 &1551499126181214970
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9057075384592579939}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.29895765, y: 0.7889714}
+      - {x: -0.6520991, y: 0.29143116}
+      - {x: 0.20357433, y: -1.1607318}
+      - {x: -0.11564389, y: 0.15819867}
+      - {x: -0.016158924, y: 0.5024598}

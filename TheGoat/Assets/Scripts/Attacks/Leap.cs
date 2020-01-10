@@ -20,6 +20,7 @@ public class Leap : BaseAttack
 
     private IEnumerator Jump()
     {
+        SoundManager.instance.PlaySound(SoundManager.Sound.wolfHowl);
         WolfAnimManager.instance.Jump();
         WolfAnimManager.instance.Spin();
         while (transform.position.y < jumpHeight.position.y - securityDistance)

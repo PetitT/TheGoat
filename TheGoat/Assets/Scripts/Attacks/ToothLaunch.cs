@@ -18,6 +18,7 @@ public class ToothLaunch : BaseAttack
     public override void Attack()
     {
         amount = Convert.ToInt32(UnityEngine.Random.Range(numberOfTeeth.x, numberOfTeeth.y));
+        SoundManager.instance.PlaySound(SoundManager.Sound.wolfGrowl);
         StartCoroutine("Windup");
     }
 

@@ -16,6 +16,7 @@ public class GroundClaw : BaseAttack
 
     private IEnumerator DoAttack()
     {
+        SoundManager.instance.PlaySound(SoundManager.Sound.wolfHowl);
         WolfAnimManager.instance.Attack();
         yield return new WaitForSeconds(chargeTime / 2);
         Vector2 pos = GetPos();

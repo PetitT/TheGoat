@@ -16,6 +16,7 @@ public class Dash : BaseAttack
 
     private IEnumerator DoAttack()
     {
+        SoundManager.instance.PlaySound(SoundManager.Sound.wolfGrowl);
         WolfAnimManager.instance.Attack();
         yield return new WaitForSeconds(windupTime);
         Vector2 direction;

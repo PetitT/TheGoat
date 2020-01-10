@@ -153,5 +153,10 @@ public class WolfBehaviour : MonoBehaviour
         {
             attacks[4].Attack();
         }
+
+        if (Input.GetKeyDown(KeyCode.Keypad5))
+        {
+            attacks[5].Attack();
+        }
     }
 }
