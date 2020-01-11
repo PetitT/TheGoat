@@ -10201,13 +10201,15 @@ MonoBehaviour:
   maxX: {fileID: 0}
   minX: {fileID: 0}
   minY: {fileID: 0}
-  jumpForce: 16
-  gravity: 30
+  baseJumpForce: 20
+  gravity: 60
   groundCheck: {fileID: 5690054455554842591}
   ground:
     serializedVersion: 2
     m_Bits: 256
   distanceFromGround: 0.5
+  jumpIncTimer: 1
+  jumpIncForce: 22
   buffedMoveSpeed: 12
   anim: {fileID: 5690054454946799406}
   body: {fileID: 5690054454946798801}

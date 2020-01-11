@@ -10,11 +10,16 @@ public class GoatMovement : MonoBehaviour
     public Transform maxX, minX, minY;
 
     [Header("Jump")]
-    public float jumpForce;
+    public float baseJumpForce;
     public float gravity;
     public Transform groundCheck;
     public LayerMask ground;
     public float distanceFromGround;
+
+    [Header("JumpIncrease")]
+    public float jumpIncTimer;
+    public float jumpIncForce;
+    private bool isIncreasingJump = false;
 
     [Header("Attack")]
     public float buffedMoveSpeed;
@@ -23,6 +28,7 @@ public class GoatMovement : MonoBehaviour
     public Animator anim;
     public GameObject body;
 
+    private float currentJumpIncTimer;
     private float currentMoveSpeed;
     private float YMove;
     private bool isJumping = true;
@@ -32,6 +38,7 @@ public class GoatMovement : MonoBehaviour
         GoatAttack.instance.onAttack += AttackHandler;
 
         currentMoveSpeed = baseMoveSpeed;
+        currentJumpIncTimer = jumpIncTimer;
     }
 
     private void AttackHandler(bool isAttacking)
@@ -43,6 +50,8 @@ public class GoatMovement : MonoBehaviour
     {
         Move();
         Jump();
+        IncreaseJump();
+        CheckJumpButton();
         ApplyGravity();
         CheckGround();
         ClampPos();
@@ -79,10 +88,38 @@ public class GoatMovement : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                YMove = jumpForce;
+                YMove = baseJumpForce;
                 isJumping = true;
                 anim.SetTrigger("Jump");
                 ParticlesManager.instance.PlayGrass();
+                isIncreasingJump = true;
+            }
+        }
+    }
+
+    private void IncreaseJump()
+    {
+        if (isIncreasingJump)
+        {
+            currentJumpIncTimer -= Time.deltaTime;
+            YMove += jumpIncForce * Time.deltaTime;
+
+            if(currentJumpIncTimer <= 0)
+            {
+                currentJumpIncTimer = jumpIncTimer;
+                isIncreasingJump = false;
+            }
+        }
+    }
+
+    private void CheckJumpButton()
+    {
+        if (isIncreasingJump)
+        {
+            if (Input.GetKeyUp(KeyCode.Space))
+            {
+                isIncreasingJump = false;
+                currentJumpIncTimer = jumpIncTimer;
             }
         }
     }
@@ -116,9 +153,9 @@ public class GoatMovement : MonoBehaviour
         float Y = transform.position.y;
 
         if (X > maxX.position.x)
-           X = maxX.position.x;
+            X = maxX.position.x;
         if (X < minX.position.x)
-           X = minX.position.x;
+            X = minX.position.x;
 
         if (Y < minY.position.y)
             Y = minY.position.y;

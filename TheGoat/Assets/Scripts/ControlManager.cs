@@ -6,6 +6,7 @@ using UnityEngine;
 public class ControlManager : MonoBehaviour
 {
     public GoatMovement control;
+    public GoatAttack attack;
     public GameObject goat;
     public Transform goatMinY;
     public float fallSpeed;
@@ -17,6 +18,7 @@ public class ControlManager : MonoBehaviour
 
     private void ControlShiftHandler(bool canControl)
     {
+        attack.enabled = canControl;
         control.enabled = canControl;
         if (!control.enabled)
             StartCoroutine(Fall());
