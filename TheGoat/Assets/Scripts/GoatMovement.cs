@@ -91,8 +91,9 @@ public class GoatMovement : MonoBehaviour
                 YMove = baseJumpForce;
                 isJumping = true;
                 anim.SetTrigger("Jump");
-                ParticlesManager.instance.PlayGrass();
                 isIncreasingJump = true;
+                ParticlesManager.instance.PlayGrass();
+                SoundManager.instance.PlaySound(SoundManager.Sound.jump);
             }
         }
     }
@@ -161,5 +162,11 @@ public class GoatMovement : MonoBehaviour
             Y = minY.position.y;
 
         transform.position = new Vector2(X, Y);
+    }
+
+    private void OnDisable()
+    {
+        anim.SetTrigger("Land");
+        anim.SetBool("IsMoving", false);
     }
 }

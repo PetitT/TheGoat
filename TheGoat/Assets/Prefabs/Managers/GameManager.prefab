@@ -65,9 +65,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   control: {fileID: 0}
+  attack: {fileID: 0}
   goat: {fileID: 0}
   goatMinY: {fileID: 0}
-  fallSpeed: 3
+  fallSpeed: 4
 --- !u!114 &4608736939317103030
 MonoBehaviour:
   m_ObjectHideFlags: 0

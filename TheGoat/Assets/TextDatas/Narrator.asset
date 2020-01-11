@@ -13,7 +13,15 @@ MonoBehaviour:
   m_Name: Narrator
   m_EditorClassIdentifier: 
   texts:
-  - It was a night of full moon
+  - Once upon a time...
   - The goat had to survive until sunrise
-  - It could use it's shield to prevent damage
-  - Truly, a remarkable opponent...
+  - It's charge could never hurt the wolf
+  - But it could at least protect him
+  - The wolf was ferocious
+  - Though he had yet to display his full potential
+  - Would the goat ever see the sunrise again ?
+  - Half the night had passed
+  - And neither of them faltered
+  - The wolf had finally acknowledged his opponent
+  - Yet the goat remained silent
+  - The night was coming to a close...

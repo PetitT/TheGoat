@@ -117,7 +117,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 2d834269e294d574cae7e58671e69345, type: 2}
   tmp: {fileID: 0}
-  timeToDisplayText: 2
+  timeToDisplayText: 3.5
 --- !u!114 &8167592105100629641
 MonoBehaviour:
   m_ObjectHideFlags: 0

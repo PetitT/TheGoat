@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1506717663643025973}
   - component: {fileID: 1506717663643025972}
   - component: {fileID: 1506717663643025970}
+  - component: {fileID: 1506717662384283464}
   m_Layer: 0
   m_Name: SoundManager
   m_TagString: Untagged
@@ -438,11 +439,12 @@ MonoBehaviour:
   soundSource: {fileID: 1506717663643025973}
   meeeh: {fileID: 8300000, guid: 4f9065acb46f4954ebfc054a60bd1a74, type: 3}
   goatDamage: {fileID: 8300000, guid: 5c24430dd1908b445aca9b69de5de9fd, type: 3}
-  leaf: {fileID: 8300000, guid: d37a51000e60e4941a73169bf3ab35c8, type: 3}
+  leaf: {fileID: 8300000, guid: cea7c3346662598449c0a1d2d16b39a0, type: 3}
   wolfHowl: {fileID: 8300000, guid: 161465dc09cdfb24ab8bcd27dfb1885c, type: 3}
   wolfGrowl: {fileID: 8300000, guid: d4c7865d0da1922458d1fdf7c020d70a, type: 3}
   block: {fileID: 8300000, guid: 91e50752fafdf10469f3e18f41d43c39, type: 3}
   splat: {fileID: 8300000, guid: f5bf7d728f92ede43b4444ae1116e471, type: 3}
+  jump: {fileID: 8300000, guid: 492cca420dd7a5540b27e0946deef3ea, type: 3}
   hitSounds:
   - {fileID: 8300000, guid: 91e50752fafdf10469f3e18f41d43c39, type: 3}
   - {fileID: 8300000, guid: 276ad6f9307484341bcf7048543fad70, type: 3}
@@ -545,3 +547,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &1506717662384283464
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1506717663643025963}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

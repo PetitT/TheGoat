@@ -8,14 +8,14 @@ public class SoundManager : MonoBehaviour
     public static SoundManager instance;
 
     public AudioSource jojo, chill, bloodborne, soundSource;
-    public AudioClip meeeh, goatDamage, leaf, wolfHowl, wolfGrowl, block, splat;
+    public AudioClip meeeh, goatDamage, leaf, wolfHowl, wolfGrowl, block, splat, jump;
 
     public List<AudioClip> hitSounds;
     public float timeBetweenHits;
     public int numberOfHits;
 
     public enum Song { jojo, chill, bloodborne};
-    public enum Sound { meeeh, goatDamage, leaf, wolfHowl, wolfGrowl, block, splat};    
+    public enum Sound { meeeh, goatDamage, leaf, wolfHowl, wolfGrowl, block, splat, jump};    
 
     private Song currentSong;
 
@@ -67,7 +67,7 @@ public class SoundManager : MonoBehaviour
                 soundSource.PlayOneShot(goatDamage);
                 break;
             case Sound.leaf:
-                soundSource.PlayDelayed(-0.7f);
+                soundSource.PlayOneShot(leaf);
                 break;
             case Sound.wolfHowl:
                 soundSource.PlayOneShot(wolfHowl);
@@ -80,6 +80,9 @@ public class SoundManager : MonoBehaviour
                 break;
             case Sound.splat:
                 soundSource.PlayOneShot(splat);
+                break;
+            case Sound.jump:
+                soundSource.PlayOneShot(jump);
                 break;
             default:
                 break;
