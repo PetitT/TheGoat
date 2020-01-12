@@ -34,7 +34,7 @@ public class GoatAttack : MonoBehaviour
     {
         if (canAttack)
         {
-            if (Input.GetKeyDown(KeyCode.A))
+            if (Input.GetKeyDown(KeyCode.A) || Input.GetButtonDown("Fire1"))
             {
                 StartCoroutine("Attack");
             }

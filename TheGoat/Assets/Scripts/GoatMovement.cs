@@ -86,7 +86,7 @@ public class GoatMovement : MonoBehaviour
     {
         if (!isJumping)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space) || Input.GetButtonDown("Jump"))
             {
                 YMove = baseJumpForce;
                 isJumping = true;
@@ -117,7 +117,7 @@ public class GoatMovement : MonoBehaviour
     {
         if (isIncreasingJump)
         {
-            if (Input.GetKeyUp(KeyCode.Space))
+            if (Input.GetKeyUp(KeyCode.Space) || Input.GetButtonUp("Jump"))
             {
                 isIncreasingJump = false;
                 currentJumpIncTimer = jumpIncTimer;
