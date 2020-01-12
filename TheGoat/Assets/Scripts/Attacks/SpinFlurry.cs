@@ -7,7 +7,7 @@ public class SpinFlurry : BaseAttack
 {
     public GameObject body;
     public Transform wolfSpinPos;
-    public Transform wolfLandPos;
+    public List<Transform> wolfLandPos;
     public float securityDistance;
     public float jumpSpeed;
     public float attackDuration;
@@ -65,9 +65,11 @@ public class SpinFlurry : BaseAttack
 
     private IEnumerator Land()
     {
-        while (!CheckDistance(wolfLandPos))
+        int random = UnityEngine.Random.Range(0, wolfLandPos.Count);
+        Transform landPos = wolfLandPos[random];
+        while (!CheckDistance(landPos))
         {
-            transform.position = Vector2.Lerp(transform.position, wolfLandPos.position, jumpSpeed);
+            transform.position = Vector2.Lerp(transform.position, landPos.position, jumpSpeed);
             yield return null;
         }
         WolfAnimManager.instance.Land();

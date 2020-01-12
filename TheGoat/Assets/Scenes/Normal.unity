@@ -1034,6 +1034,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 51834254158598964, guid: 65cda687276f56f4d89afd347b857672,
         type: 3}
+      propertyPath: wolfLandPos.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 51834254158598964, guid: 65cda687276f56f4d89afd347b857672,
+        type: 3}
       propertyPath: wolfSpinPos
       value: 
       objectReference: {fileID: 1605406904}
@@ -1041,12 +1046,22 @@ PrefabInstance:
         type: 3}
       propertyPath: wolfLandPos
       value: 
-      objectReference: {fileID: 1231924364}
+      objectReference: {fileID: 0}
     - target: {fileID: 51834254158598964, guid: 65cda687276f56f4d89afd347b857672,
         type: 3}
       propertyPath: attackFrequency
       value: 0.04
       objectReference: {fileID: 0}
+    - target: {fileID: 51834254158598964, guid: 65cda687276f56f4d89afd347b857672,
+        type: 3}
+      propertyPath: wolfLandPos.Array.data[0]
+      value: 
+      objectReference: {fileID: 1231924364}
+    - target: {fileID: 51834254158598964, guid: 65cda687276f56f4d89afd347b857672,
+        type: 3}
+      propertyPath: wolfLandPos.Array.data[1]
+      value: 
+      objectReference: {fileID: 7948807725570313611}
     - target: {fileID: 6486712269188633583, guid: 65cda687276f56f4d89afd347b857672,
         type: 3}
       propertyPath: jumpHeight
@@ -2113,6 +2128,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e3b946f29e60e241ac6abe8cdd382e8, type: 3}
+--- !u!4 &7948807725570313611 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3744519643191986142, guid: 7e3b946f29e60e241ac6abe8cdd382e8,
+    type: 3}
+  m_PrefabInstance: {fileID: 7948807725570313610}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8167592105140152545
 PrefabInstance:
   m_ObjectHideFlags: 0

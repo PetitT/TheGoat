@@ -12,7 +12,7 @@ public class ClawCarpet : BaseAttack
     {
         SoundManager.instance.PlaySound(SoundManager.Sound.wolfHowl);
         WolfAnimManager.instance.Attack();
-        int random = UnityEngine.Random.Range(0, clawPos.Count);
+        int random = UnityEngine.Random.Range(1, clawPos.Count - 1);
 
         for (int i = 0; i < clawPos.Count; i++)
         {
