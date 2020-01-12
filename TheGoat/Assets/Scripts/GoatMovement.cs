@@ -105,7 +105,7 @@ public class GoatMovement : MonoBehaviour
             currentJumpIncTimer -= Time.deltaTime;
             YMove += jumpIncForce * Time.deltaTime;
 
-            if(currentJumpIncTimer <= 0)
+            if (currentJumpIncTimer <= 0)
             {
                 currentJumpIncTimer = jumpIncTimer;
                 isIncreasingJump = false;

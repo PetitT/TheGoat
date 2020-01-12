@@ -8,15 +8,16 @@ public class StartGame : MonoBehaviour
 {
     public PlayableDirector timeline;
 
-    private void Update()
+    public int scene = 0;
+
+    public void Begin(int number)
     {
-        if (Input.anyKey)
-            timeline.Play();
+        scene = number;
+        timeline.Play();
     }
 
-    public void Begin()
+    public void BeginGame()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(scene);
     }
-
 }
