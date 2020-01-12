@@ -46,6 +46,14 @@ public class WolfAnimManager : MonoBehaviour
         anim.SetBool("IsMoving", isMoving);
     }
 
+    public void Charge(bool isCharging)
+    {
+        if (isCharging)
+            anim.SetTrigger("StartCharge");
+        else
+            anim.SetTrigger("StopCharge");
+    }
+
     public void ToggleParticle(bool isPlaying)
     {
         if (isPlaying)

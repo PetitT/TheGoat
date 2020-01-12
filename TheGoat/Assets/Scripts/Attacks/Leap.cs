@@ -62,6 +62,7 @@ public class Leap : BaseAttack
         WolfAnimManager.instance.Land();
         WolfColliderManager.instance.ToggleCollider(false);
         WolfAnimManager.instance.ToggleParticle(false);
+        yield return new WaitForSeconds(waitTime * 2);
         AttackFinished();
     }
 }

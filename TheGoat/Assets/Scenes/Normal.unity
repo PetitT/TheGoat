@@ -1077,6 +1077,11 @@ PrefabInstance:
       propertyPath: runSpeed
       value: 18
       objectReference: {fileID: 0}
+    - target: {fileID: 8605375051797136934, guid: 65cda687276f56f4d89afd347b857672,
+        type: 3}
+      propertyPath: windupTime
+      value: 0.75
+      objectReference: {fileID: 0}
     - target: {fileID: 3535249408037639173, guid: 65cda687276f56f4d89afd347b857672,
         type: 3}
       propertyPath: clawPos.Array.data[0]
@@ -1117,6 +1122,11 @@ PrefabInstance:
       propertyPath: clawPos.Array.data[7]
       value: 
       objectReference: {fileID: 1053737588}
+    - target: {fileID: 3535249408037639173, guid: 65cda687276f56f4d89afd347b857672,
+        type: 3}
+      propertyPath: duration
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65cda687276f56f4d89afd347b857672, type: 3}
 --- !u!198 &655948186787184845 stripped
@@ -1601,6 +1611,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2673233201906994102, guid: b58ecd75c19e68b4d935fada5ab99281,
+        type: 3}
+      propertyPath: attackCooldown
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5690054455105483646, guid: b58ecd75c19e68b4d935fada5ab99281,
         type: 3}

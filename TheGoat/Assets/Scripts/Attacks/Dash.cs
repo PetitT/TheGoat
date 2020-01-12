@@ -18,11 +18,12 @@ public class Dash : BaseAttack
     {
         SoundManager.instance.PlaySound(SoundManager.Sound.wolfGrowl);
         WolfAnimManager.instance.ToggleParticle(true);
-        WolfAnimManager.instance.Attack();
+        WolfAnimManager.instance.Charge(true);
         yield return new WaitForSeconds(windupTime);
         Vector2 direction;
         Transform destination;
         GetDashParams(out direction, out destination);
+        WolfAnimManager.instance.Charge(false);
         WolfAnimManager.instance.Move(true);
         WolfColliderManager.instance.ToggleCollider(true);
         while (!CheckDestination(destination))

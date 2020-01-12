@@ -1290,6 +1290,11 @@ PrefabInstance:
       propertyPath: runSpeed
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 8605375051797136934, guid: 65cda687276f56f4d89afd347b857672,
+        type: 3}
+      propertyPath: windupTime
+      value: 0.9
+      objectReference: {fileID: 0}
     - target: {fileID: 3535249408037639173, guid: 65cda687276f56f4d89afd347b857672,
         type: 3}
       propertyPath: clawPos.Array.data[0]
@@ -1330,6 +1335,11 @@ PrefabInstance:
       propertyPath: clawPos.Array.data[7]
       value: 
       objectReference: {fileID: 1053737588}
+    - target: {fileID: 3535249408037639173, guid: 65cda687276f56f4d89afd347b857672,
+        type: 3}
+      propertyPath: duration
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65cda687276f56f4d89afd347b857672, type: 3}
 --- !u!198 &655948186787184845 stripped
