@@ -1,5 +1,49 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4497659280555885876
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8786313120813290788}
+  - component: {fileID: 3046668299803819188}
+  m_Layer: 0
+  m_Name: CinematicSkip
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8786313120813290788
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4497659280555885876}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4608736939317103028}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3046668299803819188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4497659280555885876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00dda525d48c8e040874ea56add28c40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeScaleBuff: 15
 --- !u!1 &4608736939317103027
 GameObject:
   m_ObjectHideFlags: 0
@@ -17,6 +61,7 @@ GameObject:
   - component: {fileID: 4608736939317103018}
   - component: {fileID: 4608736939317103019}
   - component: {fileID: 4608736939317103020}
+  - component: {fileID: 3700736315708231748}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -34,7 +79,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 8786313120813290788}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -98,7 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4226401de2e64cc4f97c619943945bbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
+  health: 5
 --- !u!114 &4608736939317103017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -155,3 +201,16 @@ MonoBehaviour:
   wolf: {fileID: 0}
   slowForce: 0.2
   slowDuration: 5
+--- !u!114 &3700736315708231748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4608736939317103027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e758e02350281441ac2a626c3503256, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trexSprite: {fileID: 21300000, guid: 5f9ba713407c2594e979c36f6c9863f6, type: 3}

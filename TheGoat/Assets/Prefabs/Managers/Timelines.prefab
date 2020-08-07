@@ -77,6 +77,8 @@ PlayableDirector:
     value: {fileID: 0}
   - key: {fileID: 8519087540397730591, guid: 0c1ff1fc9f16d9542885da33f8da35e6, type: 2}
     value: {fileID: 0}
+  - key: {fileID: -6980059271161194283, guid: 0c1ff1fc9f16d9542885da33f8da35e6, type: 2}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References:
     - fcffd23b0d755e648bca273f8610eb1f: {fileID: 0}
@@ -174,6 +176,8 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 34bd91e7fa093d5459c7bb01dd1655f3, type: 2}
     - {fileID: 11400000, guid: 3005e9765500d6747b5f37b22126da35, type: 2}
     - {fileID: 11400000, guid: 4c38ee23e8d88504a836754dd6517d98, type: 2}
+    - {fileID: 0}
+    - {fileID: 0}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -490,6 +494,14 @@ MonoBehaviour:
           m_CallState: 2
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
+    - m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    - m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
 --- !u!1 &5967481610498380920
 GameObject:
   m_ObjectHideFlags: 0
@@ -576,6 +588,8 @@ PlayableDirector:
   - key: {fileID: 3806973483817077019, guid: 3154461c022227643af73ec0ee9f6131, type: 2}
     value: {fileID: 0}
   - key: {fileID: -4574395106136476333, guid: 3154461c022227643af73ec0ee9f6131, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 8685755481890151588, guid: 3154461c022227643af73ec0ee9f6131, type: 2}
     value: {fileID: 0}
   m_ExposedReferences:
     m_References:
